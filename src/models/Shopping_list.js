@@ -2,17 +2,14 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
   sequelize.define(
-    "Inventary",
+    "shopping_list",
     {
-      talla: {
-        type: DataTypes.STRING,
-      },
-      cantidad: {
-        type: DataTypes.INTEGER,
+      product_list: {
+        type: DataTypes.ARRAY(DataTypes.INTEGER),
         allowNull: false,
-        defaultValue: 0,
       },
     },
+
     {
       timestamps: false,
     }
